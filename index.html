@@ -132,18 +132,19 @@
 
   .cta-row {
     display: flex;
-    gap: clamp(24px, 6.38vw, 118px);
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(30px, 3.24vw, 60px);
     margin-bottom: clamp(50px, 8.27vw, 153px);
   }
   .cta-group {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: clamp(10px, 1.62vw, 30px);
+    gap: clamp(10px, 0.87vw, 16px);
   }
   .cta-icon {
-    height: clamp(56px, 6.49vw, 120px);
+    height: clamp(70px, 7.57vw, 140px);
     width: auto;
     flex-shrink: 0;
     display: block;
@@ -199,7 +200,6 @@
 
   @media (max-width: 480px) {
     .tagline { white-space: normal; }
-    .cta-row { row-gap: 28px; }
   }
 </style>
 </head>
@@ -232,10 +232,12 @@
     <p>
       DAYBYLAB is built on the philosophy of<br>
       "healthy habits, built one day at a time."<br>
-      We are a wellness lifestyle company that <br>
-      researches the everyday concerns<br> 
-      and needs across various categories of life, <br>
-      with the goal of leading people toward a better day.
+      We are a wellness lifestyle company that<br>
+      researches the everyday concerns 
+      and needs across various categories of life,<br>
+      with the goal of leading people toward a better day.<br>
+
+    </p>
     </p>
   </div>
 
@@ -248,7 +250,7 @@
       </div>
     </div>
     <div class="cta-group">
-      <img class="cta-icon" src="data:image/png;base64,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" alt="">
+      
       <div class="cta-item">
         <div class="cta-label">Work With Us | 협업문의</div>
         <a href="mailto:daybylab@gmail.com" class="cta-button">daybylab@gmail.com</a>
